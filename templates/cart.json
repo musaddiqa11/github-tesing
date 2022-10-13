@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "189778ae-3e43-4446-859c-606502dd1e75": {
+          "type": "text",
+          "settings": {
+          }
+        },
+        "giftnote": {
+          "type": "gift-note",
+          "settings": {
+            "enabled": true,
+            "free_gift_enabled": true,
+            "free_gift_title": "",
+            "free_gift_text": "Is this a gift? Select and add your gift message below.",
+            "free_gift_button": "SELECT",
+            "free_gift_button_remove": "X REMOVE",
+            "paid_gift_enabled": true,
+            "freegiftproduct": "gift-packaging",
+            "paid_gift_title": "",
+            "paid_gift_text": "Add Gift Box (wrapping) & Gift Card for an additional",
+            "paid_gift_button": "SELECT",
+            "paid_gift_button_remove": "X REMOVE",
+            "cart_discount_enable": true
+          }
+        },
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "189778ae-3e43-4446-859c-606502dd1e75",
+        "giftnote",
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-footer",
+    "featured-collection"
+  ]
+}

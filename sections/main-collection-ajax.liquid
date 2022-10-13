@@ -1,0 +1,35 @@
+<div class="container container--no-max">
+  <h1>{{ collection.title }}</h1>
+  <br>
+
+  <br>
+  <table>
+    <tr>
+    <td>
+        <ol>
+            {% for tag in collection.tags %}
+                <li>{{ tag | link_to_tag: tag }}</li>
+            {% endfor %}
+        </ol>
+    </td>
+    <td>
+        <ol>
+            {% for tag in collection.all_tags %}
+                <li>{{ tag | link_to_tag: tag }}</li>
+            {% endfor %}
+        </ol>
+    </td>
+</tr>
+</table>
+</div>
+
+<style>
+  body #shopify-section-header,
+  body #shopify-section-announcement-bar,
+  body #pagefooter {
+    display: none;
+  }
+  td{
+    vertical-align: top;
+  }
+</style>

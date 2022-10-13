@@ -1,0 +1,98 @@
+{% assign proSku = product.selected_or_first_available_variant.sku | split: '-' | first %}
+
+
+{% assign productsList = '' %}
+{% if proSku.size > 0 %}
+{% for collection in product.collections %}
+ {% for pro in collection.products %}
+   {% if pro.handle != product.handle %}
+     {% for tag in pro.tags %}
+     	{% if tag contains proSku %}
+            {% unless productsList contains pro.handle %}
+               {% if productsList == '' %}
+ 					{% assign productsList = pro.handle %}
+               {% else %}
+                {% assign productsList = productsList | join: ',' %}
+                {% assign productsList = productsList | append: ',' | append: pro.handle %}
+                {% assign productsList = productsList | split: ',' %}  
+               {% endif %} 
+            {% endunless %} 
+        {% endif %}
+     {% endfor %}
+   {% endif %}
+ {% endfor %}
+{% endfor %}
+{% endif %}
+
+
+{% for handle in productsList %}
+
+  {% assign otherProduct = all_products[handle] %}
+
+  {% if otherProduct.featured_image != blank %}               
+    <a href="{{otherProduct.url}}" asdfff>
+      <label class="opt-label opt-label-color"{% if swatches %} data-swatch="{{ value | handle }}"{% endif %}>
+        <img style="max-width:50px;" src="{{ otherProduct.featured_image | img_url: 'master' }}" />
+        {% if otherProduct.available == false %}
+        <img class="color-crossed-out" src="{{ 'soldout.png' | asset_url }}" aria-label="sold out" alt="sold out"/>
+    {% endif %}
+      </label>
+    </a>
+   {% endif %}
+
+{% endfor %}
+
+
+
+<style>
+    .product-form__input input[type=radio]:checked+label.opt-label {
+        background-color: transparent;
+    }
+    fieldset.product-form__input.swatch.single-option-selector.color .opt-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-width: 4.5em;
+        min-height: 48px;
+        margin: 10px 10px 0 0;
+        padding: 11px 15px;
+        border: 1px solid #bfbfbf;
+        border-radius: 3px;
+        background-color: #ffffff;
+        color: #000000;
+    }
+    fieldset.product-form__input.swatch.single-option-selector.color .opt-label {
+        border-color: #000000;
+        cursor: default;
+    }
+    fieldset.product-form__input.swatch.single-option-selector.color .opt-label-color {
+        min-width: inherit;
+        min-height: inherit;
+        padding: 0;
+        height: 80px;
+    }
+    fieldset.product-form__input.swatch.single-option-selector.color label img {
+        height: fit-content;
+        max-height: 100%;
+    }
+    fieldset.js.product-form__input.swatch.single-option-selector.color {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    fieldset.product-form__input.swatch.single-option-selector.color label.opt-label.opt-label-color {
+        padding: 0;
+    }
+    fieldset.product-form__input.swatch.single-option-selector.color a .opt-label {
+        cursor: pointer;
+        border-color:#bfbfbf;
+    }
+    fieldset.product-form__input.swatch.single-option-selector.color a:hover .opt-label {
+        border-color: #555555;
+    }
+    img.color-crossed-out {
+        position: absolute;
+        width: 100%;
+        height: 100% !important;
+    }
+</style>

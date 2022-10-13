@@ -1,0 +1,391 @@
+<gift-note class="cart__note">
+    {%- assign product = block.settings.freegiftproduct -%}
+    <div id="is-a-gift" class="clearfix rte">
+        <h3>Gift Wrapping & Message</h3>
+        <div class="gift-wrapping__wrapper">
+            {% if block.settings.free_gift_enabled %}
+            <div class="gift-wrapping__container">
+            {% if block.settings.free_gift_image %}
+                {% assign free_gift_image = block.settings.free_gift_image | img_url: '84x' %}
+                <div class="imgWrap"><img src="{{ free_gift_image }}" class="icon"></div>
+            {% else %}
+                <div class="imgWrap"><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m462 74h-412c-27.57 0-50 22.43-50 50v264c0 27.57 22.43 50 50 50h155c5.523 0 10-4.477 10-10s-4.477-10-10-10h-155c-16.542 0-30-13.458-30-30v-122h217.34c1.603 8.116 6.434 15.268 13.599 19.811 2.333 1.479 4.815 2.603 7.373 3.395l-17.606 30.278c-2.037 3.502-1.759 7.887 0.703 11.104s6.622 4.63 10.534 3.581l23.946-6.427 6.407 23.951c1.045 3.908 4.342 6.801 8.353 7.33 0.439 0.058 0.876 0.086 1.311 0.086 3.538 0 6.856-1.88 8.657-5l45.592-78.968 57.119 101.55c1.786 3.175 5.134 5.098 8.713 5.098 0.416 0 0.834-0.026 1.254-0.079 4.034-0.509 7.358-3.409 8.409-7.337l6.408-23.952 23.946 6.427c3.894 1.044 8.035-0.35 10.502-3.54 2.467-3.189 2.777-7.547 0.788-11.054l-29.407-51.821c0.929 0.086 1.86 0.139 2.791 0.139 5.684 0 11.339-1.602 16.331-4.766 7.165-4.542 11.997-11.695 13.599-19.811h25.339v122c0 16.542-13.458 30-30 30h-100v-54c0-5.523-4.477-10-10-10s-10 4.477-10 10v54h-51.965c-5.523 0-10 4.477-10 10s4.477 10 10 10h171.96c27.57 0 50-22.43 50-50v-264c0-27.57-22.43-50-50-50zm-200.35 194.92c-3.111-1.972-4.895-5.215-4.895-8.899v-70.063h-1e-3c0-3.684 1.784-6.927 4.895-8.899 3.111-1.973 6.806-2.202 10.137-0.63l49.064 23.149c-1.211 3.285-1.873 6.833-1.873 10.533v21.391c0 3.818 0.71 7.471 1.996 10.842l-49.186 23.206c-3.331 1.57-7.025 1.342-10.137-0.63zm33.727 54.271-2.751-10.284c-0.686-2.563-2.362-4.75-4.66-6.076-2.298-1.328-5.029-1.686-7.592-0.998l-10.18 2.732 12.94-22.254 46.091-21.746-33.848 58.626zm-15.056-160.85c-9.514-4.488-20.496-3.805-29.379 1.826s-14.187 15.273-14.187 25.791v56.045h-216.75v-122c0-16.542 13.458-30 30-30h292v85.667c0 1.654 0.408 3.209 1.119 4.583-3.206 0.686-6.224 1.878-8.973 3.485l-53.828-25.397zm74.326 83.698h-5.134c-5.81 0-10.537-4.727-10.537-10.536v-21.392c0-5.81 4.727-10.536 10.537-10.536h5.134c5.81 0 10.537 4.726 10.537 10.536v21.392c0 5.81-4.727 10.536-10.537 10.536zm79.511 85.303-10.526-2.825c-2.563-0.688-5.294-0.328-7.592 0.998-2.298 1.327-3.975 3.513-4.66 6.076l-2.651 9.908-45.403-80.724c2.202-0.654 4.3-1.55 6.265-2.658l34.528 16.291 30.039 52.934zm8.199-62.42c-3.112 1.973-6.806 2.202-10.137 0.63l-49.056-23.145c1.3-3.389 2.02-7.063 2.02-10.904v-21.392c0-3.723-0.672-7.292-1.897-10.594l48.933-23.087c3.332-1.571 7.025-1.342 10.137 0.63 3.111 1.972 4.895 5.216 4.895 8.899v70.064c0 3.683-1.784 6.927-4.895 8.899zm49.647-22.919h-24.752v-56.044c0-10.518-5.304-20.16-14.187-25.791-8.884-5.631-19.867-6.313-29.379-1.826l-53.743 25.356c-2.77-1.61-5.811-2.802-9.042-3.477 0.7-1.366 1.103-2.91 1.103-4.551v-85.667h100c16.542 0 30 13.458 30 30v122z"/><path d="m253.82 420.93c-1.86-1.86-4.44-2.93-7.07-2.93s-5.21 1.07-7.07 2.93-2.93 4.44-2.93 7.07 1.07 5.21 2.93 7.07 4.44 2.93 7.07 2.93 5.21-1.07 7.07-2.93c1.87-1.86 2.93-4.44 2.93-7.07s-1.06-5.21-2.93-7.07z"/><path d="m211.5 128h-147.5c-5.523 0-10 4.477-10 10s4.477 10 10 10h147.5c5.523 0 10-4.477 10-10s-4.477-10-10-10z"/><path d="m211.5 354h-147.5c-5.523 0-10 4.477-10 10s4.477 10 10 10h147.5c5.523 0 10-4.477 10-10s-4.477-10-10-10z"/><path d="m126 182h-62c-5.523 0-10 4.477-10 10s4.477 10 10 10h62c5.523 0 10-4.477 10-10s-4.477-10-10-10z"/><path d="m171.76 184.93c-1.86-1.86-4.44-2.93-7.07-2.93-2.64 0-5.21 1.07-7.07 2.93s-2.93 4.44-2.93 7.07 1.07 5.21 2.93 7.07 4.43 2.93 7.07 2.93c2.63 0 5.21-1.07 7.07-2.93s2.93-4.44 2.93-7.07-1.07-5.21-2.93-7.07z"/></svg></div>
+            {% endif %}
+            {% if block.settings.free_gift_title != blank %}<h4>{{block.settings.free_gift_title}}</h4>{% endif %}
+
+                <input
+                class="gift-wrapping__check hidden" 
+                id="free-gift-wrapping"
+                type="checkbox"
+                name="attributes[free-gift-wrapping]" 
+                value="yes" 
+                {% if cart.attributes.free-gift-wrapping %} checked="checked" {% endif %}
+                />
+                <label for="free-gift-wrapping">{{block.settings.free_gift_text}}</label>
+                <button 
+                    type="button"
+                    class="button button--small button--secondary gift-wrapping__button {% if cart.attributes.free-gift-wrapping != blank %} gift-wrapping__button--selected{% endif %}" 
+                    data-input="free-gift-wrapping" 
+                    data-note="free-gift-note">
+                    {% if cart.attributes.free-gift-wrapping != blank  %}{{block.settings.free_gift_button_remove}}{% else %}{{block.settings.free_gift_button}}{% endif %}
+                </button>
+                {% if cart.attributes.free-gift-wrapping %}
+                <div class="gift-wrap__bottom">
+                    <label for="free-gift-note">Gift Message (up to 100 characters):</label>
+                    <textarea name="attributes[free-gift-note]" id="free-gift-note">{{ cart.attributes.free-gift-note }}</textarea>
+                </div>
+                {%- endif -%}
+            </div>
+            {%- endif -%}
+            
+            
+            {% if block.settings.paid_gift_enabled %}
+            <div class="gift-wrapping__container">
+                {% if block.settings.paid_gift_image %}
+                    {% assign paid_gift_image = block.settings.paid_gift_image | img_url: '84x' %}
+                    <div class="imgWrap"><img src="{{ paid_gift_image }}" class="icon"></div>
+                {% else %}
+                    <div class="imgWrap"><svg viewBox="-17 0 483 483.02631" xmlns="http://www.w3.org/2000/svg"><path d="m194.492188 109.507812c2.523437 0 4.902343-1.191406 6.410156-3.214843 1.511718-2.023438 1.980468-4.636719 1.261718-7.058594-5.734374-19.582031-15.644531-37.6875-29.054687-53.0625-10.804687-11.496094-26.886719-16.417969-42.273437-12.9375-2.125.8125-3.800782 2.492187-4.613282 4.617187-.441406 1.195313-.769531 2.429688-.976562 3.6875-.246094 1.492188-.378906 3-.402344 4.511719v.128907c.097656 12.757812 5.238281 24.960937 14.304688 33.941406 15.375 13.398437 33.46875 23.304687 53.039062 29.035156.75.222656 1.523438.34375 2.304688.351562zm-44-40.714843c-3.175782-3.179688-5.667969-6.980469-7.328126-11.160157v-.078124c-.351562-.886719-.65625-1.777344-.917968-2.632813-.136719-.464844-.234375-.902344-.351563-1.359375-.121093-.457031-.226562-.800781-.304687-1.199219-.082032-.402343-.097656-.5625-.152344-.847656-.234375-1.195313-.398438-2.402344-.488281-3.617187 7.890625.597656 15.300781 4.003906 20.894531 9.601562 7.953125 8.992188 14.363281 19.238281 18.96875 30.328125-11.101562-4.621094-21.363281-11.054687-30.359375-19.035156zm0 0"/><path d="m440.011719 115.027344h-123.488281c5.339843-3.648438 10.355468-7.753906 14.984374-12.265625 28.617188-28.703125 29.554688-72.222657 11.273438-90.503907s-61.785156-17.359374-90.519531 11.289063c-11.75 12.789063-21.296875 27.4375-28.25 43.351563-6.953125-15.925782-16.507813-30.582032-28.269531-43.375-28.703126-28.617188-72.21875-29.554688-90.503907-11.273438-18.289062 18.28125-17.34375 61.800781 11.277344 90.511719 4.632813 4.511719 9.648437 8.617187 14.984375 12.265625h-123.488281c-4.417969 0-8.0000002 3.582031-8.0000002 8v80c0 4.417968 3.5820312 8 8.0000002 8h16v232c.027343 22.078125 17.921875 39.972656 40 40h320c22.082031-.027344 39.976562-17.921875 40-40v-232h16c4.417969 0 8-3.582032 8-8v-80c0-4.417969-3.582031-8-8-8zm-176.429688-80.175782c22.992188-22.921874 56.527344-22.65625 67.894531-11.289062 11.367188 11.367188 11.640626 44.886719-11.28125 67.886719-10.496093 9.703125-22.480468 17.660156-35.496093 23.578125h-47.804688c0-.167969 0-.351563 0-.519532 0-1.824218-.136719-3.671874-.3125-5.53125-.066406-.613281-.136719-1.222656-.207031-1.847656-.183594-1.535156-.410156-3.066406-.683594-4.589844-.085937-.535156-.175781-1.074218-.269531-1.601562-.382813-1.992188-.800781-3.953125-1.28125-5.847656-.0625-.273438-.136719-.511719-.199219-.800782-.425781-1.65625-.863281-3.199218-1.3125-4.796874-.0625-.21875-.121094-.457032-.183594-.675782 6.554688-19.9375 17.15625-38.3125 31.136719-53.964844zm-7.570312 160.175782h-64v-64h64zm-128.175781-103.570313c-22.925782-23-22.65625-56.519531-11.285157-67.894531 11.367188-11.375 44.886719-11.640625 67.871094 11.265625 14.554687 16.304687 25.464844 35.53125 32 56.390625.902344 2.808594 1.597656 5.503906 2.253906 8.121094.183594.75.335938 1.476562.496094 2.214844.433594 1.953124.78125 3.816406 1.042969 5.601562.085937.605469.199218 1.230469.269531 1.820312.253906 1.996094.390625 4.007813.410156 6.019532h-57.570312c-13.007813-5.90625-24.988281-13.851563-35.488281-23.539063zm-111.824219 39.570313h160v64h-160zm24 312v-232h152v256h-128c-13.253907 0-24-10.746094-24-24zm168 24v-256h32v256zm200-24c0 13.253906-10.742188 24-24 24h-128v-256h152zm24-248h-160v-64h160zm0 0"/><path d="m253.507812 109.53125c.769532 0 1.535157-.109375 2.273438-.328125 19.59375-5.726563 37.707031-15.652344 53.078125-29.089844 11.382813-10.886719 16.289063-26.902343 12.960937-42.296875-.804687-2.117187-2.480468-3.789062-4.597656-4.597656-15.394531-3.328125-31.410156 1.578125-42.296875 12.960938-13.433593 15.371093-23.359375 33.484374-29.089843 53.078124-.714844 2.421876-.25 5.039063 1.261718 7.058594 1.511719 2.023438 3.886719 3.214844 6.410156 3.214844zm32.730469-52.039062c5.601563-5.59375 13.019531-8.996094 20.910157-9.601563-.597657 7.894531-4.003907 15.316406-9.597657 20.917969-9 8.007812-19.277343 14.453125-30.402343 19.074218 4.625-11.125 11.078124-21.394531 19.089843-30.390624zm0 0"/></svg></div>
+                {% endif %}
+                {% if block.settings.paid_gift_title != blank %}<h4>{{block.settings.paid_gift_title}}</h4>{% endif %}
+
+
+            <input  class="gift-wrapping__check hidden"
+                id="gift-wrapping"
+                type="checkbox"
+                  name="attributes[paid-gift-wrapping]" value="yes" {% if
+                cart.attributes.paid-gift-wrapping %} checked="checked" {% endif %} style="float: none" />
+                <label for="gift-wrapping">
+                    {% assign paid_gift_price = product.selected_or_first_available_variant.price | money %}
+                    {{block.settings.paid_gift_text | replace: "<price>", paid_gift_price}}
+                </label>
+                <button 
+                class="button button--small button--secondary gift-wrapping__button {% if cart.attributes.paid-gift-wrapping %} gift-wrapping__button--selected{% endif %}" 
+                data-input="gift-wrapping" 
+                data-note="gift-note">
+          {% if cart.attributes.paid-gift-wrapping %}{{block.settings.paid_gift_button_remove}}{% else %}{{block.settings.paid_gift_button}}{% endif %}
+        </button>
+        {% if cart.attributes.paid-gift-wrapping != blank %}
+        <div class="gift-wrap__bottom">
+          <label for="gift-note">Add a note to your order</label>
+          <textarea 
+                    name="attributes[gift-note]" 
+                    id="gift-note" 
+                    {% unless cart.attributes.paid-gift-wrapping %} disabled {% endunless %}>{{- cart.attributes.gift-note -}}</textarea>
+        </div>
+        {% endif %}
+
+        </div>
+            {%- endif -%}
+    </div>
+    </div>
+
+  {% assign id = product.selected_or_first_available_variant.id %}
+
+    {% assign gift_wraps_in_cart = 0 %}
+    {% for item in cart.items %}
+    {% if item.id == id %}
+    {% assign gift_wraps_in_cart = item.quantity %}
+    {% endif %}
+    {% endfor %}
+
+    <style>
+    .cart__qty{{id}} {display: none;}
+    
+
+gift-note.cart__note .gift-wrapping__wrapper {
+    display: flex;
+  }
+  
+  gift-note.cart__note .gift-wrapping__wrapper .gift-wrapping__container {
+    flex: 1 1 auto;
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px 20px;
+    border: 5px solid #eee;
+    color: var(--color-text);
+  }
+  
+  gift-note.cart__note .gift-wrapping__wrapper .gift-wrapping__container .imgWrap img {
+    width: 84px;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-bottom: 14px;
+  }
+  
+  gift-note.cart__note .gift-wrapping__wrapper .gift-wrapping__container button.gift-wrapping__button {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 20px;
+    height: 40px;
+    min-height: 0;
+    min-width: 0;
+    padding: 5px 13px 5px;
+  }
+  
+  gift-note.cart__note .gift-wrapping__wrapper .gift-wrapping__container textarea {
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 10px;
+    min-height: 52px;
+  }
+  
+  gift-note.cart__note .gift-wrapping__wrapper .gift-wrapping__container label {
+    display: block;
+    position: static;
+    line-height: normal;
+    height: auto;
+  }
+  
+  gift-note.cart__note {
+    max-width: 50%;
+    width: 50rem;
+  }
+  
+  gift-note.cart__note:after {
+    border: 0 none;
+    box-shadow: none;
+  }
+  
+  gift-note.cart__note .gift-wrapping__wrapper .gift-wrapping__container .imgWrap {
+    width: 80px;
+    margin: auto;
+  }
+  gift-note.cart__note h3{
+    margin-top: 0;
+  }
+  .cart__footer .cart__note.field{
+    margin-top: 42px;
+  }
+  @media (max-width: 749px) {
+    gift-note.cart__note .gift-wrapping__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    gift-note.cart__note .gift-wrapping__wrapper .gift-wrapping__container {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+  }
+  
+  
+  /*================ Spinner Icon ================*/
+  gift-note.cart__note .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: currentColor;
+  }
+  gift-note.cart__note .icon-spinner {
+    -moz-animation: spin 500ms infinite linear;
+    -o-animation: spin 500ms infinite linear;
+    -webkit-animation: spin 500ms infinite linear;
+    animation: spin 500ms infinite linear; }
+  
+    @-webkit-keyframes spin {
+      0% {
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+      100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+    
+    @-moz-keyframes spin {
+      0% {
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+      100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+    
+    @-ms-keyframes spin {
+      0% {
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+      100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+    
+    @keyframes spin {
+      0% {
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+      100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+    </style>
+    <script>
+      Shopify.Cart = Shopify.Cart || {};
+
+      Shopify.Cart.GiftWrap = {};
+  
+      Shopify.Cart.GiftWrap.set = function () {
+          var headers = new Headers({ 'Content-Type': 'application/json' });
+          var request = {
+                  method: 'POST',
+                  headers: headers,
+                  body: JSON.stringify({ 
+                      updates: { {{ id }}: 1 }, attributes: { 'paid-gift-wrapping': true, 'gift-note': null, 'free-gift-wrapping': null, 'free-gift-note': null  } 
+                  })
+              };
+          fetch('/cart/update.js', request).then(function () { location.href = '/cart'; });
+      }
+  
+      Shopify.Cart.GiftWrap.remove = function () {
+          var headers = new Headers({ 'Content-Type': 'application/json' });
+  
+          var request = {
+                  method: 'POST',
+                  headers: headers,
+                  body: JSON.stringify({ 
+                      updates: { {{ id }}: 0}, attributes: { 'paid-gift-wrapping': null, 'gift-note': null, 'free-gift-note': null  } 
+                  })
+              };
+              fetch('/cart/update.js', request).then(function () { location.href = '/cart'; });
+      }
+  
+  
+      // Free gift message
+      Shopify.Cart.freeGiftWrap = {};
+  
+      Shopify.Cart.freeGiftWrap.set = function () {
+          var headers = new Headers({ 'Content-Type': 'application/json' });
+          var request = {
+                  method: 'POST',
+                  headers: headers,
+                  body: JSON.stringify({ 
+                      // This is a free message so don't needed to add product
+                      updates: {  {{ id }}: 0 }, attributes: { 'free-gift-wrapping': true, 'free-gift-note': null, 'paid-gift-wrapping': null, 'gift-note': null } 
+                  })
+              };
+          fetch('/cart/update.js', request).then(function () { location.href = '/cart'; });
+      }
+  
+      Shopify.Cart.freeGiftWrap.remove = function () {
+          var headers = new Headers({ 'Content-Type': 'application/json' });
+  
+          var request = {
+                  method: 'POST',
+                  headers: headers,
+                  body: JSON.stringify({ 
+                      // This is a free message so don't needed to add product
+                      updates: { /* {{ id }}: 0 */ }, attributes: { 'free-gift-wrapping': null, 'free-gift-note': null, 'gift-note': null } 
+                  })
+              };
+              fetch('/cart/update.js', request).then(function () { location.href = '/cart'; });
+      }
+  
+      // If we have nothing but gift-wrap items in the cart.
+      {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
+      document.addEventListener("DOMContentLoaded", function () {
+          Shopify.Cart.GiftWrap.remove();
+      });
+      // If we have more than one gift-wrap item in the cart.
+      {% elsif gift_wraps_in_cart > 1 %}
+      document.addEventListener("DOMContentLoaded", function () {
+          Shopify.Cart.GiftWrap.set();
+      });
+      // If we have a gift-wrap item in the cart but our gift-wrapping cart attribute has not been set.
+      {% elsif gift_wraps_in_cart > 0 and cart.attributes.paid-gift-wrapping == blank %}
+      document.addEventListener("DOMContentLoaded", function () {
+          Shopify.Cart.GiftWrap.set();
+      });
+      // If we have no gift-wrap item in the cart but our gift-wrapping cart attribute has been set.
+      {% elsif gift_wraps_in_cart == 0 and cart.attributes.paid-gift-wrapping != blank %}
+      document.addEventListener("DOMContentLoaded", function () {
+          Shopify.Cart.GiftWrap.set();
+      });
+      {% endif %}
+  
+      //when clicking the gift button, click on the checkbox for that gift option
+      let giftButtons = document.querySelectorAll('.gift-wrapping__button');
+      giftButtons.forEach(function(button){
+          var input = button.dataset.input;
+          let loader = '<span data-loader><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-spinner" viewBox="0 0 20 20"><path d="M7.229 1.173a9.25 9.25 0 1 0 11.655 11.412 1.25 1.25 0 1 0-2.4-.698 6.75 6.75 0 1 1-8.506-8.329 1.25 1.25 0 1 0-.75-2.385z" fill="#919EAB"/></svg></span>';
+          
+          //console.log(input);
+          button.addEventListener('click',function(e){
+              e.preventDefault();
+              button.innerHTML = loader;
+              let inputEl = document.getElementById(input); 
+              //console.log(input,inputEl);
+              inputEl.removeAttribute('disabled')
+              inputEl.click();
+          });
+      });
+      
+      // When the Paid gift-wrapping checkbox is checked or unchecked.
+      document.addEventListener("DOMContentLoaded", function () {
+          {% if block.settings.paid_gift_enabled %}
+          document.querySelector('[name="attributes[paid-gift-wrapping]"]').addEventListener("change", function (event) {
+              if (event.target.checked) {
+                  Shopify.Cart.GiftWrap.set();
+              } else {
+                  Shopify.Cart.GiftWrap.remove();
+              }
+          });
+         
+          {% if cart.attributes.paid-gift-wrapping != blank %}
+            document.querySelector('#gift-note').addEventListener("change", function (evt) {
+                var note = evt.target.value;
+                var headers = new Headers({ 'Content-Type': 'application/json' });
+                var paidgiftCheckBox = document.getElementById("gift-wrapping");
+                
+                var request = {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify({ attributes: { 'gift-note': note } })
+                };
+                if (paidgiftCheckBox.checked == true){
+                    fetch('/cart/update.js', request);
+                }
+            });
+          {% endif %}
+          {%endif %}
+      });
+  
+      // When the Paid free-gift-wrapping checkbox is checked or unchecked.
+      document.addEventListener("DOMContentLoaded", function () {
+          {% if block.settings.free_gift_enabled %}
+          document.querySelector('[name="attributes[free-gift-wrapping]"]').addEventListener("change", function (event) {
+              if (event.target.checked) {
+                  Shopify.Cart.freeGiftWrap.set();
+              } else {
+                  Shopify.Cart.freeGiftWrap.remove();
+              }
+          });
+         
+          {% if cart.attributes.free-gift-wrapping %}
+          document.querySelector('#free-gift-note').addEventListener("change", function (evt) {
+              var note = evt.target.value;
+              var headers = new Headers({ 'Content-Type': 'application/json' });
+              var freegiftCheckBox = document.getElementById("free-gift-wrapping");
+  
+              var request = {
+                  method: 'POST',
+                  headers: headers,
+                  body: JSON.stringify({ attributes: { 'free-gift-note': note } })
+              };
+              if (freegiftCheckBox.checked == true){
+                  fetch('/cart/update.js', request);
+              }
+          });
+          {% endif %}
+          {%endif %}
+      });
+  </script>
+
+</gift-note>

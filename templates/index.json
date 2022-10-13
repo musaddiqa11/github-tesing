@@ -1,0 +1,335 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "NEW SEASON",
+            "text_style": "body"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "NEW ARRIVALS",
+            "heading_size": "h1"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify:\/\/collections\/woman",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled-1.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "top-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "woman"
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "product": "1-2-sleeve-v-neck-tee-w-pocket-3",
+            "second_image": true
+          }
+        },
+        "collection-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "shirt"
+          }
+        },
+        "ea62f29f-1482-4f5a-8ed2-b1e42d1d2b56": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-new-arrivals"
+          }
+        },
+        "54bbdc3a-f373-4a9a-8ad7-31308c776fb8": {
+          "type": "collection",
+          "settings": {
+            "collection": "kids"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "product",
+        "collection-0",
+        "ea62f29f-1482-4f5a-8ed2-b1e42d1d2b56",
+        "54bbdc3a-f373-4a9a-8ad7-31308c776fb8"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1ebb21a3-0caf-4b88-a72d-aa27bc367e1d": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15282562236623__1ebb21a3-0caf-4b88-a72d-aa27bc367e1d-1665153712a52100cc-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Spring – Summer Trending 2020",
+            "heading_size": "h2"
+          }
+        },
+        "template--15282562236623__1ebb21a3-0caf-4b88-a72d-aa27bc367e1d-1665153712a52100cc-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Typography is the work of typesetters, compositors, typographers, graphic designers, art directors, manga artists, ...<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--15282562236623__1ebb21a3-0caf-4b88-a72d-aa27bc367e1d-1665153712a52100cc-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15282562236623__1ebb21a3-0caf-4b88-a72d-aa27bc367e1d-1665153712a52100cc-0",
+        "template--15282562236623__1ebb21a3-0caf-4b88-a72d-aa27bc367e1d-1665153712a52100cc-1",
+        "template--15282562236623__1ebb21a3-0caf-4b88-a72d-aa27bc367e1d-1665153712a52100cc-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/stacked-bracelets.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "e46b1a70-2f28-4688-8fd7-88946fcfadc3": {
+      "type": "image-banner",
+      "blocks": {
+        "template--15282562236623__e46b1a70-2f28-4688-8fd7-88946fcfadc3-1665149660d10c62c6-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "SUMMER SALE  UP TO 70%",
+            "heading_size": "h1"
+          }
+        },
+        "template--15282562236623__e46b1a70-2f28-4688-8fd7-88946fcfadc3-1665149660d10c62c6-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--15282562236623__e46b1a70-2f28-4688-8fd7-88946fcfadc3-1665149660d10c62c6-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15282562236623__e46b1a70-2f28-4688-8fd7-88946fcfadc3-1665149660d10c62c6-0",
+        "template--15282562236623__e46b1a70-2f28-4688-8fd7-88946fcfadc3-1665149660d10c62c6-1",
+        "template--15282562236623__e46b1a70-2f28-4688-8fd7-88946fcfadc3-1665149660d10c62c6-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/model-poses-near-bushes.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "video": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "collage",
+    "1ebb21a3-0caf-4b88-a72d-aa27bc367e1d",
+    "rich_text",
+    "featured_collection",
+    "e46b1a70-2f28-4688-8fd7-88946fcfadc3",
+    "video",
+    "multicolumn"
+  ]
+}
